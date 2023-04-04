@@ -9,3 +9,9 @@ require (
 	github.com/lib/pq v1.10.6 // indirect
 	google.golang.org/appengine v1.6.5 // indirect
 )
+
+// override indirect dependencies to resolve vulnerabilities: CVE-2021-43565, CVE-2022-27191, CVE-2022-32149
+replace (
+	golang.org/x/crypto => golang.org/x/crypto v0.0.0-20220315160706-3147a52a75dd
+	golang.org/x/text => golang.org/x/text v0.3.8
+)
